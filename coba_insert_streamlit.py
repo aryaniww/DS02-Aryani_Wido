@@ -20,7 +20,7 @@ y_train = [1, 1, 0, 0]
 model.fit(X_train, y_train)
 
 
-pg = st.navigation([st.Page("Home.py", title="Home"),
+pg = st.navigation([st.Page("coba_insert_streamlit.py", title="Home"),
                     st.Page("file-4-model/UAS_DS02_Aryani.py", title="Docs")]) 
 
 # Judul aplikasi
