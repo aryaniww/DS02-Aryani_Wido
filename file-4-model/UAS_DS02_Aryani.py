@@ -9,11 +9,8 @@ Original file is located at
 Aryani Wido Werdani A11.2023.15476
 
 ---
-"""
 
-"""## 1. Pengumpulan Data
-________________________________________
-(target data adalah potability)
+## 1. Pengumpulan Data
 """
 
 # %%writefile app.py
@@ -44,6 +41,10 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from sklearn.preprocessing import LabelEncoder
 from sklearn import metrics
 import streamlit as st
+
+
+pg = st.navigation([st.Page("coba_insert_streamlit.py", title="Home"),
+                    st.Page("file-4-model/UAS_DS02_Aryani.py", title="Docs")]) 
 
 # from google.colab import drive
 # drive.mount('/content/drive')
