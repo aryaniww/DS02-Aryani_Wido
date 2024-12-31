@@ -1,4 +1,7 @@
 import streamlit as st
-st.set_page_config(page_title="Potability Predict", layout="wide")
+
+pg = st.navigation([st.Page("Home.py", title="Home"),
+                    st.Page("file-4-model/UAS_DS02_Aryani.py", title="Docs")])
+pg.run()
 st.title("Welcome")
 st.write("Insert your data here:")
