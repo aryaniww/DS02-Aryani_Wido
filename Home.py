@@ -5,3 +5,4 @@ pg = st.navigation([st.Page("Home.py", title="Home"),
 # pg.run()
 st.title("Welcome")
 st.write("Insert your data here:")
+model = load_model()
