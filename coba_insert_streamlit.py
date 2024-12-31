@@ -18,7 +18,7 @@ def load_model():
         model = pickle.load(file)
     return model
 
-model = load_model()
+# model = load_model()
 
 # Judul aplikasi
 st.title("Prediksi Potabilitas Air Menggunakan Random Forest")
