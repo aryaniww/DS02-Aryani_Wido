@@ -10,7 +10,9 @@ Aryani Wido Werdani A11.2023.15476
 
 ---
 
-## 1. Pengumpulan Data
+"""## 1. Pengumpulan Data
+________________________________________
+(target data adalah potability)
 """
 
 # %%writefile app.py
