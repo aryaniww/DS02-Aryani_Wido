@@ -9,6 +9,7 @@ Original file is located at
 Aryani Wido Werdani A11.2023.15476
 
 ---
+"""
 
 """## 1. Pengumpulan Data
 ________________________________________
