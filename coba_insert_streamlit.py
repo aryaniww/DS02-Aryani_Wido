@@ -22,7 +22,7 @@ model.fit(X_train, y_train)
 
 pg = st.navigation([st.Page("coba_insert_streamlit.py", title="Home"),
                     st.Page("file-4-model/UAS_DS02_Aryani.py", title="Docs")]) 
-pg.run()
+
 # Judul aplikasi
 st.title("Prediksi Potabilitas Air Menggunakan Decision Tree")
 
