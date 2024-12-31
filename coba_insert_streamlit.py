@@ -20,6 +20,8 @@ def load_model():
 
 model = load_model()
 
+pg = st.navigation([st.Page("Home.py", title="Home"),
+                    st.Page("file-4-model/UAS_DS02_Aryani.py", title="Docs")]) 
 # Judul aplikasi
 st.title("Prediksi Potabilitas Air Menggunakan Random Forest")
 
