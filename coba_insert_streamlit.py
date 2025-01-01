@@ -1,20 +1,35 @@
 import streamlit as st
+import pandas as pd
 import numpy as np
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+# -----------------------------
+pg = st.navigation([st.Page("coba_insert_streamlit.py", title="Home"),
+                    st.Page("file-4-model/UAS_DS02_Aryani.py", title="Docs")]) 
+# -----------------------------
 
+water_data = pd.read_csv('water_potability.csv')
+wd = water_data.fillna(water_data.mean())
+data = wd
+X = data[["ph", "Hardness", "Solids", "Chloramines", "Sulfate", "Conductivity", "Organic_carbon", "Trihalomethanes", "Turbidity"]]
+y = data["Potability"]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state=42)
+# Model
+model = RandomForestClassifier(random_state=42)
+# -----------------------------
 # Membuat model Decision Tree
-model = DecisionTreeClassifier()
+# model = DecisionTreeClassifier()
 
 # Contoh data untuk pelatihan (dapat diganti dengan dataset yang sebenarnya)
 # Data terdiri dari fitur: [ph, hardness, solids, chloramines, sulfate, conductivity, organic_carbon, trihalomethanes, turbidity]
 # Label potability: 1 (layak diminum), 0 (tidak layak diminum)
-X_train = [
-    [7.0, 200.0, 15000.0, 4.0, 300.0, 400.0, 10.0, 80.0, 4.0],
-    [6.5, 180.0, 12000.0, 3.5, 250.0, 350.0, 9.0, 70.0, 3.5],
-    [8.0, 220.0, 17000.0, 5.0, 320.0, 450.0, 11.0, 90.0, 5.0],
-    [5.5, 150.0, 10000.0, 2.5, 200.0, 300.0, 8.0, 60.0, 2.5]
-]
-y_train = [1, 1, 0, 0]
+# X_train = [
+#     [7.0, 200.0, 15000.0, 4.0, 300.0, 400.0, 10.0, 80.0, 4.0],
+#     [6.5, 180.0, 12000.0, 3.5, 250.0, 350.0, 9.0, 70.0, 3.5],
+#     [8.0, 220.0, 17000.0, 5.0, 320.0, 450.0, 11.0, 90.0, 5.0],
+#     [5.5, 150.0, 10000.0, 2.5, 200.0, 300.0, 8.0, 60.0, 2.5]
+# ]
+# y_train = [1, 1, 0, 0]
 
 # Melatih model
 model.fit(X_train, y_train)
